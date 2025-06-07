@@ -1,40 +1,47 @@
+# Murano Framework
 
-# Murano
+Murano é um framework em PHP desenvolvido por mim com o objetivo de acelerar e padronizar o desenvolvimento de futuros projetos.  
 
-Murano é um framework em PHP, criado por mim, com intuição de minimizar tempo em futuros projetos.
-Atualmente está usando o PHP 7.4, com MVC. Criado a partir de um modelo de um projeto de uma 
-aula que fiz, no B7 Web.
+A versão atual (2025) utiliza **PHP 8.2** e segue a arquitetura **MVC** com melhorias em organização, performance e segurança.
 
 ![Logo](https://prnt.sc/bhAaT351C9eP)
 
+---
 
-## Lessons Learned
+## 🚀 Principais Recursos
 
-Criando este framework, aprendi várias coisas, sobre clean code, maneiras de usar
- classes, funções, trabalhar melhor com banco de dados e várias coisas a mais.
+- Estrutura MVC otimizada
+- Autoload via Composer
+- Tratamento de rotas personalizado
+- Templates modulares com Bootstrap 5
+- Login, cadastro, esqueceu a senha
+- Envio de email
 
+---
 
-## License
+## 📘 Lições Aprendidas
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Durante a criação e evolução deste framework, aprendi muito sobre:
 
+- Clean Code
+- Padrões de projeto em PHP
+- Organização de classes e funções reutilizáveis
+- Integração segura com banco de dados (PDO)
+- Boas práticas de versionamento com Git
 
-## Installation
+---
 
-Install my-project with GIT
+## 🧰 Requisitos
 
-git clone https://github.com/iahgod/Murano.git
-or
-git clone git@github.com:iahgod/Murano.git
-    
-## Appendix
+- PHP 8.0 ou superior  
+- Composer  
+- Apache
 
-É necessário rodar o composer install na pasta principal do projeto.
+---
 
-Na UI foi utilizado template NiceAdmin: https://bootstrapmade.com/demo/NiceAdmin/
+## ⚙️ Instalação
 
+Clone o projeto:
 
-## Authors
-
-- [@iahgod](https://www.github.com/iahgod)
-
+```bash
+git clone https://github.com/iahgod/Framework-2025
