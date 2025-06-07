@@ -62,14 +62,12 @@ class LoginController extends Controller {
                 // Envia o e-mail com as instruções de recuperação
                 $baseUrl = $this->base();
                 $resetLink = $baseUrl.'/reset-password?token=' . $reset_token;
-                $resultado = Email::enviar(
+                Email::enviar(
                     $email,
                     $user['name'],
                     'Recuperação de Senha',
                     "Para recuperar sua senha, clique no link abaixo:<br><a href='{$resetLink}'>Recuperar Senha</a><br>O link é válido por 1 hora."
                 );
-                echo $resultado;
-                exit;
                 Mensagem::success('Instruções para recuperação de senha enviadas para o seu e-mail.');
             } else {
                 Mensagem::error('E-mail não encontrado.');
