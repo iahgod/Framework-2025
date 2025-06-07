@@ -39,12 +39,7 @@ Durante a criação e evolução deste framework, aprendi muito sobre:
 
 ## ⚙️ Instalação
 
-Clone o projeto:
+Clone o projeto e atualize o composer:
 
 ```bash
 git clone https://github.com/iahgod/Framework-2025
-
-Atualize o Composer
-
-```bash
-composer update
