@@ -43,3 +43,8 @@ Clone o projeto:
 
 ```bash
 git clone https://github.com/iahgod/Framework-2025
+
+Atualize o Composer
+
+```bash
+composer update
