@@ -2,11 +2,7 @@
 
 Murano é um framework em PHP desenvolvido por mim com o objetivo de acelerar e padronizar o desenvolvimento de futuros projetos.  
 
-<<<<<<< HEAD
 A versão atual (2025) utiliza **PHP 8.0** e segue a arquitetura **MVC** com melhorias em organização, performance e segurança.
-=======
-A versão atual (2025) utiliza **PHP 8.2** e segue a arquitetura **MVC** com melhorias em organização, performance e segurança.
->>>>>>> 47a74eabb56e87d0b1e0c75abf66aaa610488da3
 
 ---
 
@@ -43,12 +39,7 @@ Durante a criação e evolução deste framework, aprendi muito sobre:
 
 ## ⚙️ Instalação
 
-Clone o projeto:
+Clone o projeto e atualize o composer:
 
 ```bash
 git clone https://github.com/iahgod/Framework-2025
-
-Atualize o Composer
-
-```bash
-composer update
