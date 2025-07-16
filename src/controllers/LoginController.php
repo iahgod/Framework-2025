@@ -5,8 +5,15 @@ use \core\Controller;
 use \core\murano\DB;
 use \core\murano\Mensagem;
 use \core\murano\Email;
+use \src\handlers\UserHandler;
 
 class LoginController extends Controller {
+
+    private $loggedUser;
+
+    public function __construct() {
+        $this->loggedUser = UserHandler::checkLogin();
+    }
 
 
     public function loginView() {
@@ -28,9 +35,13 @@ class LoginController extends Controller {
                 ->one();
             // Verifica se o usuário foi encontrado e se a senha está correta
             if ($user && password_verify($password, $user['password'])) {
-                $_SESSION['user'] = $user;
-                echo "Logado com sucesso!";
-                exit;
+                $token = bin2hex(random_bytes(16));
+                $_SESSION['token'] = $token;
+                DB::table('users')
+                    ->update(['token' => $token, 'last_login' => date('Y-m-d H:i:s')])
+                    ->where('email', $email)
+                    ->execute();
+                $this->redirect('/dashboard');
             } else {
                 Mensagem::error('E-mail ou senha inválidos.');
                 $this->returnPage();
@@ -164,6 +175,15 @@ class LoginController extends Controller {
 
         $this->returnPage();
 
+    }
+    public function logout() {
+
+         DB::table('users')
+            ->update(['token' => ''])
+            ->where('id', $this->loggedUser->id)
+            ->execute();
+        
+        $this->redirect('/login');
     }
 
 }

@@ -13,4 +13,3 @@ $router->post('/new-password', 'LoginController@updatePassword');
 $router->post('/sigin', 'LoginController@register');
 
 
-
